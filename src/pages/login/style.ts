@@ -21,10 +21,11 @@ export const style = StyleSheet.create({
     input: {
         width: "100%",
         height: 50,
-        backgroundColor: "white",
-        borderRadius: 5,
-        paddingHorizontal: 10,
+        borderBottomWidth: 1,
+        borderBottomColor: "white",
+        color: "white",
         fontSize: 16,
+        paddingHorizontal: 10,
         marginBottom: 10,
     },
     forgotPassword: {
@@ -43,6 +44,7 @@ export const style = StyleSheet.create({
         alignItems: "center",
         borderRadius: 5,
         marginBottom: 10,
+        marginTop: 40,
     },
     loginButtonText: {
         color: "white",
@@ -57,6 +59,7 @@ export const style = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         borderRadius: 5,
+        marginTop: 20,
     },
     registerButtonText: {
         color: "white",

@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, TouchableOpacity, View, Image, FlatList, StatusBar, SafeAreaView } from "react-native";
-import { style } from "./styles";
+import { style } from "./style";
 
 const menuItems = [
   { id: "1", title: "Meu Plano" },

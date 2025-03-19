@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Text, TextInput, TouchableOpacity, View, Image } from "react-native";
-import { style } from "./styles";
+import { style } from "./style";
 
 export default function Login() {
     const [cpf, setCpf] = useState("");

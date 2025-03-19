@@ -1,12 +1,12 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, View } from "react-native";
-import Menu from "./src/pages/menu/indext";
+import MeuPerfil from "./src/pages/Meu-Perfil";
 
 export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar style="light" />
-      <Menu></Menu>
+      <MeuPerfil></MeuPerfil>
     </View>
   );
 }
