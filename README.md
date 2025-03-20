@@ -1,5 +1,17 @@
 # 🦷 OdontoVision
 
+--
+
+## 👨‍💻 Equipe de Desenvolvimento
+
+| Nome              | RM       |
+|-------------------|----------|
+| Luis Henrique     | RM552692 |
+| Sabrina Café      | RM553568 |
+| Matheus Duarte    | RM554199 |
+
+---
+
 ## 📱 Sobre o Projeto
 
 **OdontoVision** é um aplicativo mobile desenvolvido em **React Native**, com o objetivo de facilitar e otimizar a experiência dos usuários da **OdontoPrev** no gerenciamento de suas consultas odontológicas. 
@@ -59,23 +71,13 @@ O aplicativo visa **incentivar consultas preventivas** e fortalecer a relação 
 A estrutura do sistema é baseada na comunicação entre o **aplicativo mobile**, o **back-end Java (Spring Boot)** e o **sistema web do dentista (C#)**.
 
 ### 📌 **Fluxo Geral do Projeto**
-![Fluxo Geral](doc/fluxo_geral.png)
+![Fluxo Geral](doc/Fluxo geral do projeto.png)
 
 ### 🔄 **Lógica do Fluxo**
-![Lógica do Fluxo](doc/logica_fluxo.png)
+![Lógica do Fluxo](doc/Lógica do Fluxo.jpg)
 
 ### 🗄️ **Banco de Dados Relacional**
-![Banco de Dados](doc/banco_dados.png)
-
----
-
-## 👨‍💻 Equipe de Desenvolvimento
-
-| Nome              | RM       |
-|-------------------|----------|
-| Luis Henrique     | RM552692 |
-| Sabrina Café      | RM553568 |
-| Matheus Duarte    | RM554199 |
+![Banco de Dados](doc/Banco de Dados Relacional do Projeto.png)
 
 ---
 
