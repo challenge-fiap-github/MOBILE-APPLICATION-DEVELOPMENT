@@ -6,11 +6,12 @@ import { StatusBar } from "expo-status-bar";
 // Importando as telas
 import Login from "./src/pages/Login";
 import PrimeiroAcesso from "./src/pages/Primeiro-acesso/index";
+import Cadastro from "./src/pages/Cadastro/index";
 
-// Definição das rotas disponíveis
 export type RootStackParamList = {
   Login: undefined;
   PrimeiroAcesso: undefined;
+  Cadastro: { cpf: string }; // Passamos o CPF para a tela de Cadastro
 };
 
 const Stack = createStackNavigator<RootStackParamList>();
@@ -22,6 +23,7 @@ export default function App() {
       <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="Login">
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="PrimeiroAcesso" component={PrimeiroAcesso} />
+        <Stack.Screen name="Cadastro" component={Cadastro} />
       </Stack.Navigator>
     </NavigationContainer>
   );

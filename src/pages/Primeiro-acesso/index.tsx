@@ -1,14 +1,10 @@
-import React from "react";
-import { View, Text, TextInput, TouchableOpacity, Image, StatusBar } from "react-native";
+import React, { useState } from "react";
+import { View, Text, TextInput, TouchableOpacity, Image, StatusBar, Alert } from "react-native";
 import { style } from "./style";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { RouteProp } from "@react-navigation/native";
-
-// Definição das rotas disponíveis
-type RootStackParamList = {
-  Login: undefined;
-  PrimeiroAcesso: undefined;
-};
+import { RootStackParamList } from "../../../App";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 // Tipagem da navegação para a tela de PrimeiroAcesso
 type PrimeiroAcessoScreenNavigationProp = StackNavigationProp<RootStackParamList, "PrimeiroAcesso">;
@@ -21,6 +17,28 @@ interface Props {
 }
 
 export default function PrimeiroAcesso({ navigation }: Props) {
+  const [cpf, setCpf] = useState("");
+
+  const verificarCPF = async () => {
+    if (!cpf) {
+      Alert.alert("Erro", "Por favor, informe seu CPF ou Carteirinha.");
+      return;
+    }
+
+    try {
+      const usuario = await AsyncStorage.getItem(`user_${cpf}`);
+      
+      if (usuario) {
+        Alert.alert("Usuário já cadastrado", "Este CPF já está cadastrado. Faça login.");
+      } else {
+        // Se não existir, redireciona para a tela de Cadastro passando o CPF
+        navigation.navigate("Cadastro", { cpf });
+      }
+    } catch (error) {
+      console.error("Erro ao buscar usuário:", error);
+    }
+  };
+
   return (
     <View style={style.container}>
       <StatusBar barStyle="light-content" backgroundColor="#0066ff" />
@@ -43,11 +61,14 @@ export default function PrimeiroAcesso({ navigation }: Props) {
         style={style.input} 
         placeholder="CPF ou Carteirinha" 
         placeholderTextColor="#ccc"
+        value={cpf}
+        onChangeText={setCpf}
+        keyboardType="numeric"
       />
 
       {/* Botão de cadastro */}
-      <TouchableOpacity style={style.button}>
-        <Text style={style.buttonText}>CADASTRAR</Text>
+      <TouchableOpacity style={style.button} onPress={verificarCPF}>
+        <Text style={style.buttonText}>VERIFICAR</Text>
       </TouchableOpacity>
     </View>
   );
