@@ -8,12 +8,13 @@ export const style = StyleSheet.create({
     },
     header: {
         flexDirection: "row",
-        justifyContent: "space-between", // Mantém alinhamento similar ao menu
+        justifyContent: "space-between", 
         alignItems: "center",
         backgroundColor: "#0066FF",
         paddingHorizontal: 15,
-        paddingTop: 40, // Desce os ícones corretamente
-        paddingBottom: 15, // Mantém um espaçamento equilibrado
+        paddingTop: 40,
+        paddingBottom: 15,
+        width: "100%",
     },
     logo: {
         width: 50,
@@ -25,11 +26,13 @@ export const style = StyleSheet.create({
         fontWeight: "bold",
         color: "white",
         textAlign: "center",
-        flex: 1, // Para garantir que fique no centro corretamente
+        flex: 1, 
     },
     backButton: {
         width: 30,
         height: 30,
+        justifyContent: "center",
+        alignItems: "center",
     },
     backIcon: {
         width: 30, 
@@ -40,12 +43,12 @@ export const style = StyleSheet.create({
         fontSize: 25,
         fontWeight: "bold",
         marginVertical: 10,
-        marginTop: 50, // Desce um pouco o título "Cobertura"
+        marginTop: 50,
     },
     gridContainer: {
         alignItems: "center",
         paddingBottom: 20,
-        marginTop: 50, // Desce um pouco os quadrados de opções
+        marginTop: 50, 
     },
     serviceBox: {
         width: 100,

@@ -5,7 +5,7 @@ import { StackNavigationProp } from "@react-navigation/stack";
 import { RouteProp } from "@react-navigation/native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
-// Definição das rotas disponíveis
+
 type RootStackParamList = {
   Login: undefined;
   PrimeiroAcesso: undefined;
@@ -13,11 +13,11 @@ type RootStackParamList = {
   Menu: undefined;
 };
 
-// Tipagem da navegação para a tela de Login
+
 type LoginScreenNavigationProp = StackNavigationProp<RootStackParamList, "Login">;
 type LoginScreenRouteProp = RouteProp<RootStackParamList, "Login">;
 
-// Definição das props do componente
+
 interface Props {
   navigation: LoginScreenNavigationProp;
   route: LoginScreenRouteProp;
@@ -27,7 +27,7 @@ export default function Login({ navigation }: Props) {
   const [cpf, setCpf] = useState("");
   const [senha, setSenha] = useState("");
 
-  // Função para validar login e redirecionar para o Menu
+  // VALIDAÇÃO DE LOGIN - FUNÇÃO
   const handleLogin = async () => {
     if (!cpf || !senha) {
       Alert.alert("Erro", "Preencha todos os campos!");

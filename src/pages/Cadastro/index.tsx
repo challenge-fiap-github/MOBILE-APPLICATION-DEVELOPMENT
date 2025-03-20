@@ -6,11 +6,11 @@ import { StackNavigationProp } from "@react-navigation/stack";
 import { RouteProp } from "@react-navigation/native";
 import { RootStackParamList } from "../../../App";
 
-// Tipagem da navegação para a tela de Cadastro
+
 type CadastroScreenNavigationProp = StackNavigationProp<RootStackParamList, "Cadastro">;
 type CadastroScreenRouteProp = RouteProp<RootStackParamList, "Cadastro">;
 
-// Definição das props do componente
+
 interface Props {
   navigation: CadastroScreenNavigationProp;
   route: CadastroScreenRouteProp;
@@ -24,17 +24,17 @@ export default function Cadastro({ navigation, route }: Props) {
   const [senha, setSenha] = useState("");
   const [confirmarSenha, setConfirmarSenha] = useState("");
 
-  // ✅ Função para formatar a data automaticamente
+  
   const formatarDataNascimento = (text: string) => {
-    // Remove caracteres não numéricos
+    
     let cleaned = text.replace(/\D/g, "");
 
-    // Limita a 8 dígitos (DDMMAAAA)
+    
     if (cleaned.length > 8) {
       cleaned = cleaned.substring(0, 8);
     }
 
-    // Aplica a formatação DD/MM/AAAA
+
     let formatted = cleaned;
     if (cleaned.length > 2) {
       formatted = cleaned.substring(0, 2) + "/" + cleaned.substring(2);
@@ -84,9 +84,9 @@ export default function Cadastro({ navigation, route }: Props) {
           placeholder="Data de nascimento *"
           placeholderTextColor="#ccc"
           value={dataNascimento}
-          onChangeText={formatarDataNascimento} // Chama a função de formatação
+          onChangeText={formatarDataNascimento} // EDITANDO A OPÇÃO DATA
           keyboardType="numeric"
-          maxLength={10} // Limita a 10 caracteres (DD/MM/AAAA)
+          maxLength={10} // TESTE DE IMPLEMENTAÇÃO DE LIMETE DE CHAR NA DAT
         />
         <TextInput style={style.input} placeholder="E-mail *" placeholderTextColor="#ccc" keyboardType="email-address" value={email} onChangeText={setEmail} />
         <TextInput style={style.input} placeholder="Celular *" placeholderTextColor="#ccc" keyboardType="phone-pad" value={celular} onChangeText={setCelular} />

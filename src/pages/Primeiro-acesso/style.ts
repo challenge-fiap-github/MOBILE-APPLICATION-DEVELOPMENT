@@ -24,7 +24,7 @@ export const style = StyleSheet.create({
         width: "100%",
     },
     logo: {
-        width: 250, // Mantendo o mesmo tamanho da tela de login
+        width: 250,
         height: 200,
         resizeMode: "contain",
         marginBottom: 50,
@@ -37,13 +37,13 @@ export const style = StyleSheet.create({
     input: {
         width: "100%",
         height: 40,
-        borderBottomWidth: 1, // Adiciona apenas a linha inferior
-        borderBottomColor: "#ffffff", // Linha branca como na imagem
-        color: "#ffffff", // Texto branco
+        borderBottomWidth: 1,
+        borderBottomColor: "#ffffff",
+        color: "#ffffff",
         fontSize: 16,
         marginBottom: 20,
         paddingHorizontal: 10,
-        backgroundColor: "transparent", // Remove o fundo branco
+        backgroundColor: "transparent",
     },
     button: {
         width: "100%",

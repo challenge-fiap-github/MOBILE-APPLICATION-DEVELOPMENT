@@ -1,49 +1,34 @@
 import React from "react";
-import { View, Text, Image, TouchableOpacity, FlatList } from "react-native";
+import { View, Text, Image, TouchableOpacity } from "react-native";
 import { style } from "./style";
+import { StackNavigationProp } from "@react-navigation/stack";
+import { RootStackParamList } from "../../../App";
 
-const services = [
-    "Cirurgia",
-    "Consulta Rotina",
-    "Tratamento de Canal",
-    "Coroa ou Bloco",
-    "Emergência",
-    "Clareamento",
-    "Exames",
-    "Siso",
-    "Restauração e Próteses",
-    "Teleconsulta",
-    "Tratamento Cárie",
-    "Tratamento Gengiva",
-];
+type MeuPlanoNavigationProp = StackNavigationProp<RootStackParamList, "MeuPlano">;
 
-export default function MeuPlano() {
-    return (
-        <View style={style.container}>
-            {/* Topo da tela */}
-            <View style={style.header}>
-                <Image source={require("../../assets/logo.png")} style={style.logo} resizeMode="contain" />
-                <Text style={style.title}>Meu Plano</Text>
-                <TouchableOpacity style={style.backButton}>
-                    <Image source={require("../../assets/icon_back.png")} style={style.backIcon} />
-                </TouchableOpacity>
-            </View>
+interface Props {
+  navigation: MeuPlanoNavigationProp;
+}
 
-            {/* Título Cobertura */}
-            <Text style={style.subtitle}>Cobertura</Text>
+export default function MeuPlano({ navigation }: Props) {
+  return (
+    <View style={style.container}>
+      {/* Cabeçalho */}
+      <View style={style.header}>
+        {/* Logo à esquerda */}
+        <Image source={require("../../assets/logo.png")} style={style.logo} resizeMode="contain" />
+        
+        {/* Título no centro */}
+        <Text style={style.title}>Meu Plano</Text>
 
-            {/* Grid de Serviços */}
-            <FlatList
-                data={services}
-                keyExtractor={(item) => item}
-                numColumns={3}
-                contentContainerStyle={style.gridContainer}
-                renderItem={({ item }) => (
-                    <TouchableOpacity style={style.serviceBox}>
-                        <Text style={style.serviceText}>{item}</Text>
-                    </TouchableOpacity>
-                )}
-            />
-        </View>
-    );
+        {/* Ícone de voltar à direita */}
+        <TouchableOpacity onPress={() => navigation.goBack()} style={style.backButton}>
+          <Image source={require("../../assets/icon_back.png")} style={style.backIcon} />
+        </TouchableOpacity>
+      </View>
+
+      {/* Conteúdo da tela */}
+      <Text style={style.subtitle}>Cobertura</Text>
+    </View>
+  );
 }

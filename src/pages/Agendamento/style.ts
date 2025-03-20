@@ -8,12 +8,12 @@ export const style = StyleSheet.create({
     },
     header: {
         flexDirection: "row",
-        justifyContent: "space-between", // Mantém alinhamento similar ao menu
+        justifyContent: "space-between",
         alignItems: "center",
         backgroundColor: "#0066FF",
         paddingHorizontal: 15,
-        paddingTop: 40, // Desce os ícones corretamente
-        paddingBottom: 15, // Mantém um espaçamento equilibrado
+        paddingTop: 40,
+        paddingBottom: 15,
     },
     logo: {
         width: 50,
@@ -25,7 +25,7 @@ export const style = StyleSheet.create({
         fontWeight: "bold",
         color: "white",
         textAlign: "center",
-        flex: 1, // Para garantir que fique no centro corretamente
+        flex: 1,
     },
     backButton: {
         width: 30,
@@ -39,6 +39,6 @@ export const style = StyleSheet.create({
     subtitle: {
         fontSize: 20,
         fontWeight: "bold",
-        marginTop: 50, // Para deixar o título "Agendamentos" mais para baixo
+        marginTop: 50,
     },
 });

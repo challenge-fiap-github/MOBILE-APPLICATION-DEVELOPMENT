@@ -6,11 +6,11 @@ import { RouteProp } from "@react-navigation/native";
 import { RootStackParamList } from "../../../App";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
-// Tipagem da navegação para a tela de PrimeiroAcesso
+
 type PrimeiroAcessoScreenNavigationProp = StackNavigationProp<RootStackParamList, "PrimeiroAcesso">;
 type PrimeiroAcessoScreenRouteProp = RouteProp<RootStackParamList, "PrimeiroAcesso">;
 
-// Definição das props do componente
+
 interface Props {
   navigation: PrimeiroAcessoScreenNavigationProp;
   route: PrimeiroAcessoScreenRouteProp;
@@ -31,7 +31,7 @@ export default function PrimeiroAcesso({ navigation }: Props) {
       if (usuario) {
         Alert.alert("Usuário já cadastrado", "Este CPF já está cadastrado. Faça login.");
       } else {
-        // Armazena temporariamente o CPF antes de ir para o cadastro
+        
         await AsyncStorage.setItem("temp_cpf", cpf);
         navigation.navigate("Cadastro", { cpf });
       }

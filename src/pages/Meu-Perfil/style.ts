@@ -39,7 +39,7 @@ export const style = StyleSheet.create({
     subtitle: {
         fontSize: 20,
         fontWeight: "bold",
-        marginTop: 90, // Aumentado para descer "Dados do Beneficiário"
+        marginTop: 90,
     },
     option: {
         width: "100%",
@@ -50,7 +50,7 @@ export const style = StyleSheet.create({
         paddingHorizontal: 20,
         borderBottomWidth: 1,
         borderBottomColor: "#CCCCCC",
-        marginTop: 20, // Adicionado para separar mais as opções da parte superior
+        marginTop: 20,
     },
     optionText: {
         fontSize: 16,

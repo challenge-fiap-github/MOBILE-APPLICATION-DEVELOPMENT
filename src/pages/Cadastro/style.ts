@@ -24,7 +24,7 @@ export const style = StyleSheet.create({
         tintColor: "#ffffff",
     },
     logo: {
-        width: 250, // Mantendo o mesmo tamanho da tela de login
+        width: 250,
         height: 200,
         resizeMode: "contain",
         marginBottom: 20,
@@ -33,18 +33,18 @@ export const style = StyleSheet.create({
         fontSize: 20,
         color: "#ffffff",
         marginBottom: 20,
-        marginTop: -10, // Subindo o título um pouco
+        marginTop: -10,
     },
     input: {
         width: "100%",
         height: 40,
-        borderBottomWidth: 1, // Apenas linha inferior
-        borderBottomColor: "#ffffff", // Linha branca
-        color: "#ffffff", // Texto branco
+        borderBottomWidth: 1,
+        borderBottomColor: "#ffffff",
+        color: "#ffffff",
         fontSize: 16,
-        marginBottom: 15, // Mantendo espaço entre os campos
+        marginBottom: 15,
         paddingHorizontal: 10,
-        backgroundColor: "transparent", // Sem fundo branco
+        backgroundColor: "transparent",
     },
     button: {
         width: "100%",

@@ -11,8 +11,8 @@ export const style = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "#0066ff",
     paddingHorizontal: 15,
-    paddingTop: 40, // Aumentado para descer os ícones
-    paddingBottom: 15, // Mantém um espaçamento equilibrado
+    paddingTop: 40,
+    paddingBottom: 15,
   },
   logo: {
     width: 100,
@@ -20,7 +20,7 @@ export const style = StyleSheet.create({
     resizeMode: "contain",
   },
   userIcon: {
-    width: 30, // Ajustado para um tamanho maior
+    width: 30,
     height: 30,
     resizeMode: "contain",
   },
@@ -47,18 +47,33 @@ export const style = StyleSheet.create({
     color: "#000",
   },
 
-  // ✅ Adicionando os estilos do botão de Logout
-  logoutButton: {
-    marginTop: 20,
-    alignSelf: "center",
-    backgroundColor: "#FF0000",
-    paddingVertical: 12,
-    paddingHorizontal: 20,
-    borderRadius: 5,
+
+
+
+
+  // Depois irei corrigir
+  modalOverlay: {
+    flex: 1,
+    backgroundColor: "rgba(0, 0, 0, 0.5)",
+    justifyContent: "flex-end",
   },
-  logoutText: {
-    color: "#fff",
+  modalContainer: {
+    backgroundColor: "#ffffff",
+    padding: 20,
+    borderTopLeftRadius: 10,
+    borderTopRightRadius: 10,
+    alignItems: "center",
+  },
+  modalItem: {
+    paddingVertical: 12,
+    width: "100%",
+    alignItems: "center",
+    borderBottomWidth: 1,
+    borderBottomColor: "#ddd",
+  },
+  modalText: {
     fontSize: 16,
+    color: "#ff0000",
     fontWeight: "bold",
   },
 });
