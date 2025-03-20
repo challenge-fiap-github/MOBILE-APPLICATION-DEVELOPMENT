@@ -46,4 +46,19 @@ export const style = StyleSheet.create({
     fontSize: 18,
     color: "#000",
   },
+
+  // ✅ Adicionando os estilos do botão de Logout
+  logoutButton: {
+    marginTop: 20,
+    alignSelf: "center",
+    backgroundColor: "#FF0000",
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    borderRadius: 5,
+  },
+  logoutText: {
+    color: "#fff",
+    fontSize: 16,
+    fontWeight: "bold",
+  },
 });

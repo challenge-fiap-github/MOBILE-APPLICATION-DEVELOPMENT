@@ -27,11 +27,12 @@ export default function PrimeiroAcesso({ navigation }: Props) {
 
     try {
       const usuario = await AsyncStorage.getItem(`user_${cpf}`);
-      
+
       if (usuario) {
         Alert.alert("Usuário já cadastrado", "Este CPF já está cadastrado. Faça login.");
       } else {
-        // Se não existir, redireciona para a tela de Cadastro passando o CPF
+        // Armazena temporariamente o CPF antes de ir para o cadastro
+        await AsyncStorage.setItem("temp_cpf", cpf);
         navigation.navigate("Cadastro", { cpf });
       }
     } catch (error) {
