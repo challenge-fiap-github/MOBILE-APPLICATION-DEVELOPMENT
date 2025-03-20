@@ -17,10 +17,10 @@ O aplicativo visa **incentivar consultas preventivas** e fortalecer a relação 
 ## 👥 Usuários e Perfis
 
 - **🧑‍💼 Clientes OdontoPrev:**  
-  Convêniados com perfis individuais, onde poderão acompanhar agendamentos, pontuações e benefícios.
+  - Convêniados com perfis individuais para acompanhar **agendamentos, pontuações e benefícios**.
 
 - **🦷 Dentistas (via sistema web):**  
-  Profissionais credenciados que validam consultas e atribuem pontos aos pacientes.
+  - Profissionais credenciados que validam consultas e atribuem pontos aos pacientes.
 
 ---
 
@@ -50,7 +50,22 @@ O aplicativo visa **incentivar consultas preventivas** e fortalecer a relação 
 - ⚛️ **React Native**  
 - 📦 **Expo**  
 - 🟦 **TypeScript**  
-- 💾 **AsyncStorage** (armazenamento local TEMPORARIO SP-3)
+- 💾 **AsyncStorage** (armazenamento local TEMPORÁRIO - SP-3)  
+
+---
+
+## 📂 Arquitetura do Sistema
+
+A estrutura do sistema é baseada na comunicação entre o **aplicativo mobile**, o **back-end Java (Spring Boot)** e o **sistema web do dentista (C#)**.
+
+### 📌 **Fluxo Geral do Projeto**
+![Fluxo Geral](doc/fluxo_geral.png)
+
+### 🔄 **Lógica do Fluxo**
+![Lógica do Fluxo](doc/logica_fluxo.png)
+
+### 🗄️ **Banco de Dados Relacional**
+![Banco de Dados](doc/banco_dados.png)
 
 ---
 
@@ -68,11 +83,9 @@ O aplicativo visa **incentivar consultas preventivas** e fortalecer a relação 
 
 🚧 **Em desenvolvimento...**
 
-As funcionalidades de autenticação, cadastro, navegação, sistema de pontos e integração com web estão sendo desenvolvidas com foco na usabilidade e na experiência do usuário.
+As funcionalidades de **autenticação, cadastro, navegação, sistema de pontos e integração com web** estão sendo desenvolvidas com foco na usabilidade e na experiência do usuário.
 
-*FOCA NA SPRINT 4*
+As funcionalidade de **Gamificação** serão entregues nas SP4 com todo projeto de envio e recebimento de recomepensas.
 
----
-
-
+**📢 FOCO NA SPRINT 4!**  
 
