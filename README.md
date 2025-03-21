@@ -84,6 +84,8 @@ A estrutura do sistema é baseada na comunicação entre o **aplicativo mobile**
 ### 🗄️ **Banco de Dados Relacional**
 ![Banco de Dados](doc/banco_diagrama.png)
 
+### 📱 **Classes**
+![Classes](doc/Classes.jpg)
 ---
 
 ## 📌 Status do Projeto
